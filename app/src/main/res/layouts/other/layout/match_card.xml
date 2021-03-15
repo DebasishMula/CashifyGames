@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_marginHorizontal="8dp"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="15dp"
+    android:elevation="8dp"
+    app:cardUseCompatPadding="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="vertical">
+<!--       match card header-->
+       <androidx.constraintlayout.widget.ConstraintLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginHorizontal="10dp"
+           android:layout_marginVertical="4dp"
+           >
+
+           <TextView
+               android:id="@+id/cricket_matchcard_series_title"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Series Name"
+
+               app:layout_constraintLeft_toLeftOf="parent"
+               app:layout_constraintTop_toTopOf="parent" />
+           <ImageView
+               app:layout_constraintTop_toTopOf="parent"
+               app:layout_constraintRight_toRightOf="parent"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+
+               android:src="@drawable/ic_share_social"/>
+
+
+       </androidx.constraintlayout.widget.ConstraintLayout>
+       <View
+           android:layout_width="match_parent"
+           android:layout_height="1dp"
+           android:layout_marginHorizontal="10dp"
+           android:background="#c0c0c0"/>
+
+<!--       match event-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="17dp">
+<!--             1st Team-->
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/team_shape1"
+                android:orientation="horizontal"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/cricket_matchcard_team1_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:padding="5dp"
+                    android:src="@drawable/dc" />
+
+                <TextView
+
+                    android:id="@+id/cricket_matchcard_team1_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:padding="10dp"
+                    android:text="DC"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+<!--            event and match type-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/linearLayout3"
+                app:layout_constraintStart_toEndOf="@+id/linearLayout"
+                app:layout_constraintStart_toStartOf="@+id/linearLayout"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/cricket_matchcard_timeleft"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="00h 00m"
+                    android:textColor="#ff0000" />
+
+                <TextView
+                    android:id="@+id/cricket_matchcard_gamefomat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="ODI"
+                    android:textColor="#000000" />
+            </LinearLayout>
+            <!--             2nd Team-->
+
+
+            <LinearLayout
+                android:id="@+id/linearLayout3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/team_shape1"
+                android:orientation="horizontal"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <ImageView
+
+                    android:id="@+id/cricket_matchcard_team2_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:padding="5dp"
+                    android:src="@drawable/kkr" />
+
+                <TextView
+
+                    android:id="@+id/cricket_matchcard_team2_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:padding="10dp"
+                    android:text="KKR"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+<!--       footer-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:background="#F6F4F4">
+            <TextView
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:padding="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Offers 5% site free for all league"
+                />
+            <TextView
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:padding="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_width="wrap_content"
+                android:textColor="#009688"
+                android:layout_height="wrap_content"
+                android:text="Line Up"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+   </LinearLayout>
+</androidx.cardview.widget.CardView>

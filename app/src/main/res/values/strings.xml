@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">CashifyGames</string>
+    <string name="title_home">Home</string>
+    <string name="title_myContest">My Contest</string>
+    <string name="title_more">More</string>
+    <string name="title_profile">Profile</string>
+    <string name="title_wallet">Wallet</string>
+</resources>

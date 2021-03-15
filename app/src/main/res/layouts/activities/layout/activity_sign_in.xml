@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffffff">
+<!--   Image Part-->
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/images_hape1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/dsc_79961"
+            app:layout_constraintTop_toTopOf="parent" />
+    </LinearLayout>
+<!--      second part-->
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/images_hape1"
+        android:orientation="vertical"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+<!--           welcome-->
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4.0dip"
+            android:gravity="center_horizontal"
+            android:text="WelCome..!"
+            android:textColor="#ff2d9cdb"
+            android:textSize="22.0sp"
+            android:textStyle="bold" />
+<!--          login to continue-->
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4.0dip"
+            android:gravity="center_horizontal"
+            android:text="Log In To Continue  ! "
+            android:textColor="#ff8b8b8b"
+            android:textSize="14.0sp" />
+<!--           Error Empty TextView -->
+        <TextView
+            android:id="@+id/signInFieldEmpty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Fields Can't be Empty"
+            android:textColor="#c1e12b2b"
+            android:textStyle="bold"
+            android:visibility="gone" />
+<!--        Mobile-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/signInMobile"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35.0dip"
+            android:layout_marginRight="35.0dip"
+            android:layout_marginTop="35.0dip"
+            android:hint="Mobile No."
+            app:errorEnabled="true">>
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <!--           Pin No-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/signInPin"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35.0dip"
+            android:layout_marginRight="35.0dip"
+            android:layout_marginTop="7.0dip"
+            android:hint="4 Digit Pin "
+            app:errorEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number" />
+        </com.google.android.material.textfield.TextInputLayout>
+<!--         Log In Button-->
+        <Button
+            android:id="@+id/signInLogInButton"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="45dp"
+            android:layout_marginTop="3.0dip"
+            android:background="@drawable/button_shape1"
+            android:text="Log In"
+            android:textAllCaps="false"
+            android:textColor="#ffffffff"
+            android:textSize="20.0sp" />
+<!--           Forgot Pin Part-->
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10.0dip"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Forgot Pin ?"
+                android:textSize="20.0sp" />
+            <Button
+                android:id="@+id/signInClickHereButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15.0dip"
+                android:background="#ffffffff"
+                android:stateListAnimator="@null"
+                android:text="Click here"
+                android:textAllCaps="false"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="18.0sp" />
+        </LinearLayout>
+<!--        Don't have Account Part-->
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20.0dip"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Don't have An Account?"
+                android:textSize="20.0sp" />
+            <Button
+                android:id="@+id/signInSignUpButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15.0dip"
+                android:background="#ffffffff"
+                android:stateListAnimator="@null"
+                android:text="Sign Up"
+                android:textAllCaps="false"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="18.0sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
